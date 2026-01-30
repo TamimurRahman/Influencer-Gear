@@ -8,11 +8,15 @@
     padding:0;
 }
 /* shared style */
+
+.hide{
+    display:none;
+}
 .display-flex{
     display:flex;
 }
 .section-description{
-    width: 505px;
+    max-width: 505px;
     color: rgba(58, 58, 58, 1);
     font-size: 1rem;
     font-weight: 600;
@@ -52,9 +56,10 @@ header{
     align-items:center;
 }
 .banner-content{
-    width: 582px;
+    max-width: 582px;
 }
 .banner-title{
+    max-width: 582px;
     font-size: 3.25rem;
     font-weight: 700;
 }
@@ -87,4 +92,163 @@ header{
     gap:61px;
     padding:35px;
     border-bottom:1px solid  rgba(192, 204, 218, 0.6); 
+}
+/* cart items related styles */
+main{
+    width:1440px;
+    margin:100px auto;
+}
+.cart-parent{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    /* text-align:center; */
+    max-width:1079px;
+    margin:0 auto;
+}
+.cart-items{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    /* max-width:1079px; */
+}
+.cart-section-title{
+    /* text-align:center; */
+    font-size: 28px;
+    font-weight: 600;
+}
+.cart{
+    width: 329px;
+    height: 476px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 1);
+    padding:14px;
+    flex-direction:column;
+    /* margin-right:0px; */ 
+}
+.seemore-btn{
+
+    margin-left:auto;
+    margin-top:30px;
+}
+.seemore-btn button{
+    background:none;
+    border:none;
+    color:rgba(224, 44, 109, 0.87);
+    font-size:16px;
+    font-weight:600;
+}
+
+
+/* feature product */
+.feature-product{
+    max-width:1110px;
+    /* justify-content:space-between; */
+    align-items:center;
+    /* text-align-:center; */
+    margin:0 auto;
+    margin-top:174px;
+}
+.feature-content{
+    margin-left:96px;
+}
+.feature-title{
+    font-size: 38px;
+    font-weight: 700;
+}
+.feature-btn{
+    padding: 10px 24px 10px 24px;
+    background: rgba(224, 44, 109, 1);
+    color:rgba(255, 255, 255, 1);
+    border:none;
+    text-align:center;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top:16px;
+    
+}
+footer{
+    width:100%;
+    height: 239px;
+    background: rgba(10, 8, 38, 1);
+    color:white;
+    margin:0 auto;
+    text-align:center;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    
+}
+.footer-content .footer-des{
+    margin-top:3px;
+}
+.footer-content .all-right{
+    margin-bottom:17px;
+}
+.footer-content img{
+    margin-right:16px;
+}
+
+
+@media screen and (max-width:   440px){
+    .navbar{
+        margin:0 auto;
+        flex-direction:column;
+        
+        justify-content:center;
+        align-items:center;
+    }
+    .items{
+        flex-direction:column;
+    }
+    .top-banner{
+        flex-direction:column-reverse;
+    }
+    .top-banner .banner-content{
+        display:flex;
+        flex-direction: column;
+         /* justify-content:center; */
+         align-items:center;
+         text-align:center;
+        /* max-width:100%; */
+
+    }
+.sponsors-child img{
+    max-width: 60px;
+    height: auto;
+}
+
+.sponsors-child{
+    max-width: 440px;      /* same as your design */
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+
+    justify-items: center;
+    align-items: center;
+}
+
+/* Center last row (3 items) */
+.sponsors-child img:nth-child(5){
+    grid-column: 2;
+}
+
+
+    .top-banner img{
+        width: 202px;
+        height: 190px;
+    }
+    .top-banner{
+    /* margin-top:146px; */
+    background-image:url('../images/Circle design.svg');
+    background-repeat:no-repeat;
+    background-position: top;
+    
+    align-items:center;
+}
 }
